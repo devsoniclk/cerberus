@@ -1,0 +1,26 @@
+{
+  "name": "cerberus",
+  "version": "0.1.0",
+  "description": "x402 payment firewall / wallet guard for AI agents",
+  "main": "dist/index.js",
+  "bin": { "cerberus": "dist/cli.js" },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "dev": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "viem": "^2.21.0",
+    "winston": "^3.14.0",
+    "yaml": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
+  },
+  "license": "MIT"
+}

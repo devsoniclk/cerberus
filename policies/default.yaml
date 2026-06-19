@@ -1,0 +1,21 @@
+defaults:
+  on_violation: block
+  max_per_payment_usd: 5
+  max_per_day_usd: 50
+  max_per_hour_usd: 20
+
+recipients:
+  allow: []
+  deny: []
+  first_seen_hold: true
+
+detectors:
+  prompt_injection: true
+  intent_mismatch: true
+  drain_pattern: true
+
+kill_switch:
+  freeze_on_violation: true
+
+approval:
+  threshold_usd: 10
