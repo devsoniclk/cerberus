@@ -1,0 +1,41 @@
+[
+  {
+    "name": "dust_then_drain",
+    "description": "Many tiny payments to same recipient before a large one",
+    "payments": [
+      {"to": "0xdraindraindraindraindraindraindraindraindrain", "amount": 0.01},
+      {"to": "0xdraindraindraindraindraindraindraindraindrain", "amount": 0.02},
+      {"to": "0xdraindraindraindraindraindraindraindraindrain", "amount": 0.01},
+      {"to": "0xdraindraindraindraindraindraindraindraindrain", "amount": 0.03},
+      {"to": "0xdraindraindraindraindraindraindraindraindrain", "amount": 0.01},
+      {"to": "0xdraindraindraindraindraindraindraindraindrain", "amount": 0.02},
+      {"to": "0xdraindraindraindraindraindraindraindraindrain", "amount": 0.05}
+    ],
+    "expected_flagged": true,
+    "expected_pattern": "dust-then-drain"
+  },
+  {
+    "name": "rapid_payments",
+    "description": "Many payments to same recipient in quick succession",
+    "payments": [
+      {"to": "0xrapidrapidrapidrapidrapidrapidrapidrapidrapid", "amount": 0.50},
+      {"to": "0xrapidrapidrapidrapidrapidrapidrapidrapidrapid", "amount": 0.50},
+      {"to": "0xrapidrapidrapidrapidrapidrapidrapidrapidrapid", "amount": 0.50},
+      {"to": "0xrapidrapidrapidrapidrapidrapidrapidrapidrapid", "amount": 0.50},
+      {"to": "0xrapidrapidrapidrapidrapidrapidrapidrapidrapid", "amount": 0.50},
+      {"to": "0xrapidrapidrapidrapidrapidrapidrapidrapidrapid", "amount": 0.50}
+    ],
+    "expected_flagged": true,
+    "expected_pattern": "rapid"
+  },
+  {
+    "name": "normal_usage",
+    "description": "Normal spaced payments to different recipients",
+    "payments": [
+      {"to": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1", "amount": 1.00},
+      {"to": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2", "amount": 2.00},
+      {"to": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3", "amount": 1.50}
+    ],
+    "expected_flagged": false
+  }
+]
